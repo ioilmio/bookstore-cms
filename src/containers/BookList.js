@@ -7,9 +7,13 @@ const BookList = () => {
   return (
 
     <table>
-      <th>BookID</th>
-      <th>Title</th>
-      <th>Category</th>
+      <thead>
+        <tr>
+          <th>BookID</th>
+          <th>BookID</th>
+          <th>BookID</th>
+        </tr>
+      </thead>
       <tbody>
         {
           books.map(book => (

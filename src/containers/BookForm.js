@@ -9,15 +9,15 @@ const categories = [
   'Learning',
   'Sci-Fi',
 ];
-const makeoption = categories.map(item => (
-  <option key={item.index}>
+const makeoption = categories.map((item, index) => (
+  <option key={index.toString()}>
     {item}
   </option>
 ));
 
 const BookForm = () => (
   <div>
-    <input value="title" />
+    <input placeholder="Enter title" />
     <select>
       {makeoption}
     </select>

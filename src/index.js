@@ -32,7 +32,13 @@ const initialState = {
   ],
 };
 
-const store = createStore(bookReducers, initialState);
+// const store = createStore(bookReducers, initialState);
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+  bookReducers, initialState, /* preloadedState, */
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+/* eslint-enable */
 
 ReactDOM.render(
   <Provider store={store}>
