@@ -4,6 +4,8 @@ import Book from '../components/Book';
 
 const BookList = () => {
   const books = useSelector(state => state.books);
+  const handleRemove = () => {
+  };
   return (
 
     <table>
@@ -12,12 +14,13 @@ const BookList = () => {
           <th>BookID</th>
           <th>Title</th>
           <th>Category</th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody>
         {
           books.map(book => (
-            <Book key={book.id} book={book} />
+            <Book key={book.id} book={book} onClick={() => handleRemove} />
           ))
         }
       </tbody>

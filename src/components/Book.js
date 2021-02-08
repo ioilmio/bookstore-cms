@@ -13,6 +13,9 @@ const Book = ({ book: { id, title, category } }) => (
       <td>
         {category}
       </td>
+      <td>
+        <button type="button">Remove book</button>
+      </td>
     </tr>
   </>
 );
