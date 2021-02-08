@@ -32,7 +32,6 @@ const initialState = {
   ],
 };
 
-// const store = createStore(bookReducers, initialState);
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   bookReducers, initialState, /* preloadedState, */

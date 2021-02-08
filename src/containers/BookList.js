@@ -10,8 +10,8 @@ const BookList = () => {
       <thead>
         <tr>
           <th>BookID</th>
-          <th>BookID</th>
-          <th>BookID</th>
+          <th>Title</th>
+          <th>Category</th>
         </tr>
       </thead>
       <tbody>
