@@ -1,17 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { v4 as uuidv4 } from 'uuid';
+import App from './components/App';
+import bookReducers from './reducers/index';
+
+const initialState = {
+  books: [
+    {
+      id: uuidv4(),
+      title: 'A book title',
+      category: 'Action',
+    }, {
+      id: uuidv4(),
+      title: 'Story of my life',
+      category: 'Biography',
+    }, {
+      id: uuidv4(),
+      title: '1945: The Great war',
+      category: 'History',
+    }, {
+      id: uuidv4(),
+      title: 'IT',
+      category: 'Horror',
+    }, {
+      id: uuidv4(),
+      title: 'Rails from scratch',
+      category: 'Learning',
+    },
+  ],
+};
+
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+  bookReducers, initialState, /* preloadedState, */
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+/* eslint-enable */
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
