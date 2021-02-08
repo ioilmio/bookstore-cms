@@ -1,7 +1,3 @@
-// export const CREATE_BOOK = ({ book }, state) => [
-//   ...state,
-//   book,
-// ];
 import { CREATE_BOOK, REMOVE_BOOK } from './actionsTypes';
 
 export const createBook = book => ({ type: CREATE_BOOK, book });
