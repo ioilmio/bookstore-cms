@@ -1,31 +1,42 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { removeBook } from '../actions';
 import Book from '../components/Book';
 
-const BookList = () => {
-  const books = useSelector(state => state.books);
-  const handleRemove = () => {
-  };
-  return (
+const BookList = ({ books, removeBook }) => (
 
-    <table>
-      <thead>
-        <tr>
-          <th>BookID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          books.map(book => (
-            <Book key={book.id} book={book} onClick={() => handleRemove} />
-          ))
-        }
-      </tbody>
-    </table>
-  );
+  <table>
+    <thead>
+      <tr>
+        <th>BookID</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        books.map(book => (
+          <Book key={book.id} book={book} removeBook={removeBook} />
+        ))
+      }
+    </tbody>
+  </table>
+);
+
+BookList.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
-export default BookList;
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+const mapDispatchToProps = dispatch => ({
+  removeBook: id => {
+    dispatch(removeBook(id));
+  },
+});
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
