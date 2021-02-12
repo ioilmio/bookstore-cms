@@ -4,7 +4,7 @@ import BookForm from '../containers/BookForm';
 import Nav from '../containers/Nav';
 
 const App = () => (
-  <div>
+  <div className="app">
     <Nav />
     <BookList />
     <BookForm />

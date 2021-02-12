@@ -18,11 +18,14 @@ const CategoryFilter = ({
   const selectCat = React.useRef(null);
   return (
     <div>
-      <select ref={selectCat} name="category" placeholder="Category" onChange={() => changeFilter(selectCat.current.value)}>
-        {allCategories.map(category => (
-          <option key={category}>{category}</option>
-        ))}
-      </select>
+      <label htmlFor="category" className="nav-categories">
+        Category
+        <select className="nav-filter" ref={selectCat} name="category" placeholder="Category" onChange={() => changeFilter(selectCat.current.value)}>
+          {allCategories.map(category => (
+            <option className="option" key={category}>{category}</option>
+          ))}
+        </select>
+      </label>
     </div>
   );
 };

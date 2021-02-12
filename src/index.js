@@ -20,14 +20,6 @@ const initialState = {
       id: uuidv4(),
       title: '1945: The Great war',
       category: 'History',
-    }, {
-      id: uuidv4(),
-      title: 'IT',
-      category: 'Horror',
-    }, {
-      id: uuidv4(),
-      title: 'Rails from scratch',
-      category: 'Learning',
     },
   ],
 };
