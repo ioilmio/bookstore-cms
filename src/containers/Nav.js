@@ -13,7 +13,7 @@ const Nav = ({ changeFilter }) => (
       <h1 className="nav-title">
         Bookstore CMS
       </h1>
-      <p className="nav-books">Book</p>
+      <p className="nav-books">Books</p>
       <CategoryFilter changeFilter={changeFilter} />
     </div>
     <IconContext.Provider value={{ style: { fontSize: '20px', color: 'rgb(0, 123, 255)' } }}>

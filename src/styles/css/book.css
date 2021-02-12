@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300:700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html {
   padding: 5rem;
-  background-color: #f5f6fa;
-}
+  background-color: #f5f6fa; }
 
 .app {
   display: flex;
@@ -19,31 +16,102 @@ html {
   flex-direction: column;
   margin: 0 0;
   background-color: white;
-  box-shadow: 10px 20px 30px #00000081;
-}
+  box-shadow: 10px 20px 30px #00000081; }
 
 .book-card {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 75vw;
+  justify-content: flex-start;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   padding: 2rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  margin: 2rem auto;
-}
+  margin: 2rem auto; }
+  .book-card .book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%; }
+  .book-card .book-category {
+    opacity: 0.3;
+    font-weight: 700;
+    margin: 0 0 0 0.5rem;
+    justify-content: flex-start; }
+  .book-card .book-title {
+    font-weight: 700;
+    margin: 0 0 0 0.5rem;
+    justify-content: flex-start; }
+  .book-card .book-author {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #4386bf;
+    margin: 0 0 0 0.5rem;
+    opacity: 0.5;
+    justify-content: flex-start; }
+  .book-card .book-card-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.8rem 0 0 0.5rem;
+    align-items: center; }
+  .book-card .book-action {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    color: #4386bf;
+    opacity: 0.5;
+    font-weight: 700; }
+  .book-card .book-percentage {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .book-card .book-percentage-number {
+    margin-left: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem; }
+  .book-card .book-percentage-completed {
+    font-weight: 300;
+    opacity: 0.5;
+    font-size: 0.8rem; }
+  .book-card .line {
+    width: 2px;
+    height: 70px;
+    margin: 18px 59px 0 79px;
+    border: solid 1px #e8e8e8; }
+  .book-card .line-2 {
+    width: 2px;
+    height: 20px;
+    margin: 0.5rem;
+    border: solid 1px #e8e8e8; }
+  .book-card .book-status {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    padding: 1rem;
+    color: #121212; }
+    .book-card .book-status h4 {
+      opacity: 0.5; }
+  .book-card .book-status-chapter {
+    opacity: 0.7;
+    margin: 0.4rem 0 1.2rem 0; }
+  .book-card .update-status {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    width: 10rem;
+    height: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1.2rem;
+    background-color: #0290ff;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    opacity: 1; }
 
-.book-card .book-category {
-  opacity: 0.5;
-  font-weight: 300;
-}
-
-.book-card .book-title {
-  font-weight: 700;
-}
-
-.book-card .book-action {
-  margin-right: 1rem;
-  border: none;
-}
+/*# sourceMappingURL=book.css.map */

@@ -10,7 +10,7 @@ const initialState = {
   books: [
     {
       id: uuidv4(),
-      title: 'A book title',
+      title: 'The Hunger Games',
       category: 'Action',
     }, {
       id: uuidv4(),
@@ -18,7 +18,7 @@ const initialState = {
       category: 'Biography',
     }, {
       id: uuidv4(),
-      title: '1945: The Great war',
+      title: 'The Great war',
       category: 'History',
     },
   ],

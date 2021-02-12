@@ -14,20 +14,27 @@
     align-items: center;
     font-family: $Montserrat;
 
-    .nav-categories .nav-books {
-      width: 105px;
-      height: 16px;
-      margin: 18px 664px 11px 41px;
-      opacity: 0.5;
+    .nav-categories {
+      font-weight: 700;
       font-family: $Montserrat;
-      font-size: 13px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: 1.9px;
-      color: #121212;
+      opacity: 0.2;
     }
+
+    // .nav-categories .nav-books {
+    // width: 105px;
+    // height: 16px;
+    // margin: 18px 664px 11px 41px;
+    // opacity: 0.5;
+    // font-family: $Montserrat;
+    // font-size: 13px;
+    // font-weight: 700;
+    // font-stretch: normal;
+    // font-style: normal;
+    // line-height: normal;
+    // letter-spacing: 12px;
+    // color: #121212;
+    // opacity: 0.5;
+    // }
 
     .nav-title {
       color: $azure;
@@ -36,10 +43,13 @@
     p {
       margin: 0 3rem;
       opacity: 0.7;
+      font-weight: 700;
     }
 
     .nav-filter {
       background-color: transparent;
+      appearance: none;
+      // display: none;
       border: none;
       opacity: 0.5;
     }
