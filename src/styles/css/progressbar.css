@@ -1,18 +1,20 @@
 .svg {
   display: block;
   margin: 20px auto;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .svg-circle-bg {
-  fill: none; }
+  fill: none;
+}
 
 .svg-circle {
-  fill: none; }
+  fill: none;
+}
 
 .svg-circle-text {
   font-size: 2rem;
   text-anchor: middle;
   fill: black;
-  font-weight: bold; }
-
-/*# sourceMappingURL=progressbar.css.map */
+  font-weight: bold;
+}
