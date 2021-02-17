@@ -9,6 +9,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass:watch": "sass --watch src/styles/scss:src/styles/css",
+    "sass:build": "sass --build src/styles/scss:src/styles/css"
   },
   "eslintConfig": {
     "extends": [

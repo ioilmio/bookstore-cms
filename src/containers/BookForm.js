@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { CREATE_BOOK } from '../actions/actionsTypes';
+import '../styles/css/form.css';
 
 const categories = [
   'Action',
@@ -37,14 +38,19 @@ const BookForm = () => {
     setTitle('');
   };
   return (
-
-    <form onSubmit={handleSubmit}>
-      <input placeholder="Enter title" onChange={handleTitleChange} value={bookTitle} />
-      <select onChange={handleChange}>
-        {makeoption}
-      </select>
-      <button type="submit" value="submit">Add book</button>
-    </form>
+    <div className="form">
+      <h4>ADD NEW BOOK</h4>
+      <form onSubmit={handleSubmit}>
+        <input placeholder="Enter title" onChange={handleTitleChange} value={bookTitle} />
+        <select onChange={handleChange}>
+          <option value="none" selected disabled hidden>
+            Categories
+          </option>
+          {makeoption}
+        </select>
+        <button type="submit" value="submit" onClick={handleSubmit}>Add book</button>
+      </form>
+    </div>
   );
 };
 
