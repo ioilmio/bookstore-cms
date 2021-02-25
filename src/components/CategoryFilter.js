@@ -19,7 +19,7 @@ const CategoryFilter = ({
   return (
     <div>
       <select className="nav-filter" ref={selectCat} name="category" placeholder="Category" onChange={() => changeFilter(selectCat.current.value)}>
-        <option value="none" selected disabled hidden>
+        <option value="none" defaultValue disabled hidden>
           Categories
         </option>
         {allCategories.map(category => (

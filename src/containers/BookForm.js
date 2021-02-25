@@ -25,6 +25,15 @@ const BookForm = () => {
 
   const dispatch = useDispatch();
 
+  const postBook = async () => {
+    await fetch('http://localhost:3000/api/v1/books/', {
+      method: 'POST',
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: bookTitle, category: bookCategories }),
+    });
+  };
+
   const handleTitleChange = e => {
     setTitle(e.target.value);
   };
@@ -35,15 +44,17 @@ const BookForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch({ type: CREATE_BOOK, title: bookTitle, category: bookCategories });
+    postBook();
     setTitle('');
   };
+
   return (
     <div className="form">
       <h4>ADD NEW BOOK</h4>
       <form onSubmit={handleSubmit}>
         <input placeholder="Enter title" onChange={handleTitleChange} value={bookTitle} />
         <select onChange={handleChange}>
-          <option value="none" selected disabled hidden>
+          <option value="none" defaultValue disabled hidden>
             Categories
           </option>
           {makeoption}

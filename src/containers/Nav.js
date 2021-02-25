@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link, Route, Switch } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { ImUser } from 'react-icons/im';
 import { connect } from 'react-redux';
 import '../styles/css/nav.css';
 import { changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+// import Signup from './Signup';
 
 const Nav = ({ changeFilter }) => (
   <nav className="nav">
@@ -16,6 +18,15 @@ const Nav = ({ changeFilter }) => (
       <p className="nav-books">Books</p>
       <CategoryFilter changeFilter={changeFilter} />
     </div>
+    <Link to="/">Home</Link>
+    {/* <Link to="/signup"> */}
+    {/* <Signup /> */}
+    {/* </Link> */}
+    <Switch>
+      {/* <Route path="/signup" component={Signup} /> */}
+      <Route exact path="/" />
+    </Switch>
+
     <IconContext.Provider value={{ style: { fontSize: '20px', color: 'rgb(0, 123, 255)' } }}>
       <div className="profile">
         <ImUser />

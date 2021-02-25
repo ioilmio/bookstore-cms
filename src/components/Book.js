@@ -5,6 +5,14 @@ import ProgressBar from './ProgressRing';
 
 const Book = ({ book, removeBook }) => {
   const { id, title, category } = book;
+
+  const deleteBook = async id => {
+    await fetch(`http://localhost:3000/api/v1/books/${id}`, {
+      method: 'DELETE',
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+    });
+  };
   return (
 
     <div className="book-card">
@@ -21,7 +29,16 @@ const Book = ({ book, removeBook }) => {
           {' '}
           <div className="line-2" />
 
-          <button className="book-action" type="button" onClick={() => removeBook(id)}>Remove</button>
+          <button
+            className="book-action"
+            type="button"
+            onClick={() => {
+              removeBook(id);
+              deleteBook(id);
+            }}
+          >
+            Remove
+          </button>
         </div>
       </div>
       <div className="book-percentage">
